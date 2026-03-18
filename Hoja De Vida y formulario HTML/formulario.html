@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario de Inscripción</title>
+
+<style>
+body{
+    font-family: Arial;
+}
+
+.contenedor{
+    width: 350px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+h2{
+    text-align: center;
+}
+
+input, select{
+    width: 100%;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h2>Formulario de Inscripción</h2>
+
+<form>
+
+Tipo de Documento:
+<select required>
+<option value="">Seleccione</option>
+<option>Cédula</option>
+<option>Tarjeta de Identidad</option>
+<option>Pasaporte</option>
+</select>
+<br><br>
+
+Número de Documento:
+<input type="text" required pattern="[0-9]{6,12}">
+<br><br>
+
+Nombres:
+<input type="text" required pattern="[A-Za-z ]{3,64}">
+<br><br>
+
+Apellidos:
+<input type="text" required pattern="[A-Za-z ]{3,64}">
+<br><br>
+
+Dirección:
+<input type="text" required>
+<br><br>
+
+Teléfono Fijo:
+<input type="text" pattern="[0-9]{7}">
+<br><br>
+
+Teléfono Celular:
+<input type="text" required pattern="[0-9]{10}">
+<br><br>
+
+Correo Electrónico:
+<input type="email" required>
+<br><br>
+
+Usuario:
+<input type="text" required pattern="[A-Za-z]{3,14}[0-9]{0,2}">
+<br><br>
+
+Password:
+<input type="password" required 
+pattern="(?=.*[A-Z])(?=(?:.*[a-z]){2,})(?=(?:.*[0-9]){5,})[A-Za-z0-9!?\-+/&$]{16}">
+<br><br>
+
+Fecha de Inscripción:
+<input type="date" required min="2026-02-15" max="2026-03-06">
+<br><br>
+
+Hobbies:<br>
+<input type="checkbox"> Deportes<br>
+<input type="checkbox"> Música<br>
+<input type="checkbox"> Lectura<br>
+<input type="checkbox"> Cine<br>
+<br>
+
+<button type="submit">Enviar</button>
+<button type="reset">Limpiar</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
+
+
+
